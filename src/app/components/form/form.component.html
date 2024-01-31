@@ -1,0 +1,35 @@
+<div class="form-container">
+  
+  <div class="form-container__content">
+
+
+    <form class="form-class"[formGroup]="cardForm" (ngSubmit)="onSubmit()" >
+      <div class="form-container__card-info">
+        <label for="name">NOME DO PROPRIETÁRIO</label>
+        <input [ngClass]="{ 'border-error': cardForm.get('name')?.errors && (cardForm.get('name')?.touched)}" required type="text" formControlName="name" minlength="5" class="form-control" placeholder="{{namePlaceholder}}" >
+        <p class="name-error" *ngIf="cardForm.get('name')?.errors && (cardForm.get('name')?.touched)">Nome do proprietário é obrigatório. </p>
+
+        <label for="card-number">NÚMERO DO CARTÃO </label>
+        <input [ngClass]="{ 'border-error': cardForm.get('cardNumber')?.errors && (cardForm.get('cardNumber')?.touched) }" required formControlName="cardNumber" type="tel" class="form-control" placeholder="{{numberPlaceholder}}" maxlength="16" minlength="16">
+        <p class="number-error" *ngIf="cardForm.get('cardNumber')?.errors && (cardForm.get('cardNumber')?.touched)">
+          Número do cartão incorreto
+        </p>
+      </div>
+
+      <div class="form-container__card-info-date">
+        <label for="exp-date"> EXP. DATE (MM/YY) </label> 
+        <label for="cvc">CVC</label>
+        <br>
+        <input [ngClass]="{ 'border-error': cardForm.get('mes')?.errors && (cardForm.get('mes')?.touched) }" type="tel" formControlName="mes" class="exp-date__input form-control" placeholder="MM" maxlength="2" minlength="2">
+        <input [ngClass]="{ 'border-error': cardForm.get('ano')?.errors && (cardForm.get('ano')?.touched) }" type="tel" formControlName="ano" class="exp-date__input form-control" placeholder="YY" maxlength="2" minlength="2">
+        <input [ngClass]="{ 'border-error': cardForm.get('cvc')?.errors && (cardForm.get('cvc')?.touched) }" type="tel" formControlName="cvc" class="form-control" placeholder="e.g. 123" maxlength="3" minlength="3"> 
+        <div class="info-errors">
+          <p *ngIf="cardForm.get('mes')?.errors && ( cardForm.get('ano')?.touched || cardForm.get('mes')?.touched )">Preencha corretamente</p>
+          <!-- <p *ngIf="cardForm.get('ano')?.errors && (cardForm.get('ano')?.touched)">Insira o ano</p> -->
+          <p *ngIf="cardForm.get('cvc')?.errors && (cardForm.get('cvc')?.touched)">Insira o CVC</p>
+        </div>
+      </div>
+        <button [routerLink]="'sucess'" [disabled]="cardForm.invalid" class="btn btn-primary">Confirmar</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.sucess-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  margin: 0 auto;
+}
+
+.sucess-container img {
+ height: 65px;
+ width: 65px;
+ margin-top: 30px;
+ margin-bottom: 30px;
+}
+
+.sucess-container h1 {
+  margin-bottom: 15px;
+}
+
+.sucess-container .btn-continue {
+  width: 90%;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}

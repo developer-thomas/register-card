@@ -1,0 +1,105 @@
+@media (min-width: 1440px) {
+  .form-container {
+    width: 100vw;
+    height: 100%; 
+  }
+
+  .form-container__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  }
+  
+  .form-class {
+    width: 40%;
+  }
+}
+
+.form-container {
+  width: 375px;
+  margin: 10px auto;
+}
+
+.form-container__content {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.form-class {
+  width: 85%;
+}
+
+label {
+  margin-top: 18px;
+  margin-bottom: 5px;
+  color: hsl(278, 68%, 11%);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+input {
+  margin-top: 3px;
+}
+
+// ERRORS
+.name-error, .number-error, .info-errors p{
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.border-error {
+  border-color: hsl(0, 100%, 66%);
+}
+
+.info-errors {
+  display: flex;
+
+  p {
+    padding: 5px;
+    
+  }
+}
+
+.form-container__card-info input {
+  display: block;
+  width: 100%;
+}
+
+.form-container__card-info .form-control::placeholder {
+  color: hsl(270, 3%, 87%);
+  font: bold;
+}
+
+.form-container__card-info-date input {
+  display: inline;
+  width: 70px;
+  margin-right: 10px;
+}
+
+.form-container__card-info-date input::placeholder {
+  color: hsl(270, 3%, 87%);
+  font: bold;
+}
+
+.form-container__card-info-date{
+  
+  input[name="cvc"] {
+    width: 175px;
+    margin-right: 0px;
+  } 
+
+  label[for="cvc"] {
+    margin-left: 25px;
+  }
+}
+
+.btn-primary {
+  margin: 20px auto;
+  width: 100%;
+  background-color: hsl(278, 68%, 11%);
+  padding: 15px;
+}

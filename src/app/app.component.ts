@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsService } from './services/forms.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '01-credit-card';
+  constructor(public formsService: FormsService){};
+  formValues: string = this.formsService.cardForm.value.cvc;
+  name: string = this.formsService.cardForm.value.name;
+
+
 }

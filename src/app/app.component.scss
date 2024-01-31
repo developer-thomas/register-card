@@ -1,0 +1,139 @@
+@media only screen and (min-width: 1440px) {
+  .background-images {
+    width: 50%;
+    height: 100vh;
+    background-image: url('../assets/101-main-desktop.png');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    z-index: -10
+    
+  }
+
+  .container-mainpage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    z-index: 11;
+  }
+
+  .img-container {
+    width: 100%;
+    margin: 100px;
+  }
+
+  .img-container .img-container__content {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    width: 88px;
+    margin: 0 auto;
+  }
+  
+  // tamanho dos cartões
+  .img-container__content .card {
+    width: 350px;
+    height: 200px;
+  }
+
+  // posição dos cartões
+  // .img-container__content .card-container__card-front {
+    
+  // }
+  
+  // .img-container__content .card-container__card-back{
+    
+  // }
+  
+}
+
+.container-mainpage {
+  width: 100vw;
+  position: relative;
+}
+
+.background-images {
+  width: 100vw;
+  height: 220px;
+  background-image: url('../assets/01-bg-main-mobile.png');
+  z-index: -20;
+  position: absolute;
+}
+
+.img-container {
+  width: 100%;
+}
+
+.img-container .img-container__content {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 375px;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+.card-container {
+  margin: 20px 0;
+  position: relative;
+}
+
+.card-container p {
+  position: absolute;
+  color: white;
+  z-index: 3;
+  top: 70px;
+  right: 50px;
+  font-size: 9px;
+}
+
+.card-container .card-numbers {
+  z-index: 4;
+
+  position: absolute;
+  color: white;
+  bottom: 40px;
+  width: 270px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+   
+  span {
+    padding: 0 8px;
+  }
+}
+
+.card-container .card-info {
+  z-index: 5;
+
+  position: absolute;
+  color: white;
+  bottom: 18px;
+  width: 270px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+   
+  span {
+    padding: 0 8px;
+    font-size: 8px;
+  }
+}
+
+
+.img-container__content .card {
+  width: 270px;
+  height: 155px;
+}
+
+.card-container__card-front {
+  margin-top: 88px;
+  margin-right: -200px;
+}
+
+.card-container__card-back{
+  margin-right: 12.5px;
+}
+
