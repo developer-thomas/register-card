@@ -6,7 +6,7 @@
     <form class="form-class"[formGroup]="cardForm" (ngSubmit)="onSubmit()" >
       <div class="form-container__card-info">
         <label for="name">NOME DO PROPRIETÁRIO</label>
-        <input [ngClass]="{ 'border-error': cardForm.get('name')?.errors && (cardForm.get('name')?.touched)}" required type="text" formControlName="name" minlength="5" class="form-control" placeholder="{{namePlaceholder}}" >
+        <input [ngClass]="{ 'border-error': cardForm.get('name')?.errors && (cardForm.get('name')?.touched)}" required type="text" formControlName="name" minlength="5" maxLength="25" class="form-control" placeholder="{{namePlaceholder}}" >
         <p class="name-error" *ngIf="cardForm.get('name')?.errors && (cardForm.get('name')?.touched)">Nome do proprietário é obrigatório. </p>
 
         <label for="card-number">NÚMERO DO CARTÃO </label>

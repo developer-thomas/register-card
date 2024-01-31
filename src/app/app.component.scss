@@ -1,15 +1,4 @@
-@media only screen and (min-width: 1440px) {
-  .background-images {
-    width: 50%;
-    height: 100vh;
-    background-image: url('../assets/101-main-desktop.png');
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    z-index: -10
-    
-  }
-
+@media (min-width: 1440px) {
   .container-mainpage {
     height: 100vh;
     width: 100vw;
@@ -18,17 +7,39 @@
     z-index: 11;
   }
 
-  .img-container {
-    width: 100%;
-    margin: 100px;
+  .container-mainpage .background-images {
+    width: 23vw;
+    height: 100vh;
+    background-image: url('../assets/101-main-desktop.png');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+
   }
 
-  .img-container .img-container__content {
+  .container-mainpage .img-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 999;
+
+    position: relative;
+  }
+
+  .container-mainpage .img-container .img-container__content {
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
     width: 88px;
     margin: 0 auto;
+    position: absolute;
+    left: 10%;
+    top: 0;
   }
   
   // tamanho dos cartões
@@ -37,15 +48,25 @@
     height: 200px;
   }
 
-  // posição dos cartões
-  // .img-container__content .card-container__card-front {
-    
-  // }
+  .img-container__content .card-container__card-back{
+    position: absolute;
+    top: -10px;
+    left: 70%;
+  }
   
-  // .img-container__content .card-container__card-back{
-    
-  // }
-  
+  // cvc position
+  .card-container p {
+    margin: -10px -260px;
+
+  }
+
+  // numbers / name position
+  .container-mainpage .card-container .card-numbers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
 }
 
 .container-mainpage {
