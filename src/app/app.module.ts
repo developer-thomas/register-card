@@ -11,7 +11,6 @@ import { SucessComponent } from './components/sucess/sucess.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpaceDigitsPipe } from './pipes/numberspace.pipe';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,9 +25,9 @@ import { SpaceDigitsPipe } from './pipes/numberspace.pipe';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [SpaceDigitsPipe],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
