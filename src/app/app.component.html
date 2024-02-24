@@ -1,26 +1,38 @@
 <!-- ao invés de colocar diretamente aqui, vou transformar para um component e colocar a tag dele aqui -->
 <div class="container-mainpage">
   <div class="background-images"></div>
-  
+
   <div class="img-container">
     <div class="img-container__content">
       <div class="card-container">
-        <p>{{ formsService.cardForm.get('cvc')?.value }}</p>
-        <img class="card-container__card-back card" src="../assets/02-card-back.png" alt="card-back">
+        <p>{{ formsService.cardForm.get("cvc")?.value }}</p>
+        <img
+          class="card-container__card-back card"
+          src="../assets/02-card-back.png"
+          alt="card-back"
+        />
       </div>
       <div class="card-container">
         <div class="card-numbers">
-          <span>{{ formsService.cardForm.get('cardNumber')?.value | spaceDigits }}  </span>
+          <span
+            >{{ formsService.cardForm.get("cardNumber")?.value | spaceDigits }}
+          </span>
         </div>
         <div class="card-info">
-          <span>{{ formsService.cardForm.get('name')?.value }}</span>
-          <span>{{ formsService.cardForm.get('mes')?.value }}/{{ formsService.cardForm.get('ano')?.value }}</span>
+          <span>{{ formsService.cardForm.get("name")?.value }}</span>
+          <span
+            >{{ formsService.cardForm.get("mes")?.value }}/{{
+              formsService.cardForm.get("ano")?.value
+            }}</span
+          >
         </div>
-        <img class="card-container__card-front card"src="../assets/03-card-front.png" alt="card-front">
+        <img
+          class="card-container__card-front card"
+          src="../assets/03-card-front.png"
+          alt="card-front"
+        />
       </div>
     </div>
     <router-outlet></router-outlet>
   </div>
-  
 </div>
-

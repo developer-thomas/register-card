@@ -4,9 +4,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'spaceDigits',
 })
 export class SpaceDigitsPipe implements PipeTransform {
-  transform(value: any): null {
+  transform(value: any) {
     // Remove espaços existentes e adiciona um espaço a cada quatro dígitos
-    const numericValue = value.replace(/\D/g, '');
+    let transformToString = JSON.stringify(value);
+    const numericValue = transformToString.replace(/\D/g, '');
     return numericValue.replace(/(\d{4})(?=\d)/g, '$1 ');
   }
 }
